@@ -6,14 +6,10 @@ import { FaFacebook, FaX } from "react-icons/fa6";
 const heebo = Heebo({ subsets: ["latin"] });
 
 const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
-  useEffect(() => {}, []);
-
-  console.log(siderState, "stata");
-
   return (
     <aside
       className={`w-[400px] bg-[#f6f6f6] z-[99999] top-0 p-[60px] fixed h-screen border-l duration-700 transform ${
-        siderState ? "translate-x-0" : "translate-x-full"
+        siderState ? "md:translate-x-0 translate-x-full" : "translate-x-full"
       } right-0`}
     >
       <FaX
