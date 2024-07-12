@@ -126,12 +126,13 @@ const Header = () => {
           />
         </main>
       </Container>
-
-      <DesktopSider
-        toggle={toggle}
-        siderState={siderState}
-        setSiderState={setSiderState}
-      />
+      {
+        <DesktopSider
+          toggle={toggle}
+          siderState={siderState}
+          setSiderState={setSiderState}
+        />
+      }
     </header>
   );
 };

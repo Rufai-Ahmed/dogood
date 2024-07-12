@@ -1,14 +1,9 @@
+import { iSider } from "@/public/interfaces";
 import { Heebo } from "next/font/google";
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { BsTwitterX, BsInstagram } from "react-icons/bs";
 import { FaFacebook, FaX } from "react-icons/fa6";
 const heebo = Heebo({ subsets: ["latin"] });
-
-interface iSider {
-  toggle?: () => void;
-  siderState?: boolean | null;
-  setSiderState?: Dispatch<SetStateAction<boolean | null>>;
-}
 
 const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
   return (
@@ -19,7 +14,7 @@ const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
     >
       <FaX
         className="top-12 cursor-pointer right-12 absolute"
-        onClick={toggle}
+        onClick={() => setSiderState!(false)}
         size={17}
       />
 

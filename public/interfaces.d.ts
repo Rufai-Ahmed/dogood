@@ -34,3 +34,9 @@ export interface iMobile {
   handleMouseLeave?: () => void;
   hoverIndex?: number;
 }
+
+export interface iSider {
+  toggle?: () => void;
+  siderState?: boolean | null;
+  setSiderState?: Dispatch<SetStateAction<boolean>>;
+}
