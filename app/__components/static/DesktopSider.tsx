@@ -8,7 +8,7 @@ const heebo = Heebo({ subsets: ["latin"] });
 const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
   useEffect(() => {}, []);
 
-  console.log(siderState);
+  console.log(siderState, "stata");
 
   return (
     <aside
