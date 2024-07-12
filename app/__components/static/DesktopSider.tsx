@@ -12,9 +12,9 @@ const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
 
   return (
     <aside
-      className={`w-[400px] bg-[#f6f6f6] z-[99999] top-0 p-[60px] fixed h-screen right-0 border-l duration-700 ${
-        siderState ? "md:right-0 -right-[2000px]" : "-right-[2000px]"
-      }`}
+      className={`w-[400px] bg-[#f6f6f6] z-[99999] top-0 p-[60px] fixed h-screen border-l duration-700 transform ${
+        siderState ? "translate-x-0" : "translate-x-full"
+      } right-0`}
     >
       <FaX
         className="top-12 cursor-pointer right-12 absolute"
