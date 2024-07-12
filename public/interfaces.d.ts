@@ -28,6 +28,9 @@ export interface iVolunteer {
   img?: string;
 }
 
-interface iNav {
-  name: "home";
+export interface iMobile {
+  siderState?: boolean;
+  handleMouseEnter?: (i: number) => void;
+  handleMouseLeave?: () => void;
+  hoverIndex?: number;
 }
