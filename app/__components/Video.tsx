@@ -5,6 +5,7 @@ import Head from "next/head";
 import { BsPlayBtn, BsTriangleFill } from "react-icons/bs";
 import { SiX } from "react-icons/si";
 import { FaX } from "react-icons/fa6";
+import Script from "next/script";
 
 const Video = () => {
   const [click, setClick] = useState<boolean>(false);
@@ -19,7 +20,7 @@ const Video = () => {
         }
       >
         <Head>
-          <script src="https://player.vimeo.com/api/player.js" />
+          <Script src="https://player.vimeo.com/api/player.js" />
         </Head>
         <div className="" style={{ paddingTop: "56.25%" }}>
           <iframe

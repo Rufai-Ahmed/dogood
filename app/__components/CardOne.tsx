@@ -25,6 +25,7 @@ const CardOne = () => {
             "His illud loborti",
           ].map((el: string, i: number) => (
             <li
+              key={i}
               className={`${heebo.className} flex items-center gap-3 text-[16px]`}
             >
               <MdCheck size={19} />
