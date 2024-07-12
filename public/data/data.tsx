@@ -68,3 +68,13 @@ export const volunteerData: iVolunteer[] = [
     img: "/cindy.jpg",
   },
 ];
+
+export const navData: string[] = [
+  "home",
+  "donation",
+  "blogs",
+  "newsletter",
+  "subscribe",
+  "volunteer",
+  "contact",
+];

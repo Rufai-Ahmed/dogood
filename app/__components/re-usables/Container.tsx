@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 const Container: FC<iContainer> = ({
   children,
   className,
+  onClick,
   style,
   ...props
 }) => {
@@ -12,9 +13,10 @@ const Container: FC<iContainer> = ({
     <main
       {...props}
       className={twMerge(
-        "container px-4 max-w-[335px] text-wrap mx-auto md:max-w-[720px] lg:max-w-[970px] xl:max-w-[1230px] 2xl:max-w-[1500px]",
+        "container px-4 max-w-[95%] text-wrap mx-auto  2xl:max-w-[1500px]",
         className
       )}
+      onClick={onClick}
       style={style}
     >
       {children}

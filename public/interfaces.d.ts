@@ -27,3 +27,7 @@ export interface iVolunteer {
   name?: string;
   img?: string;
 }
+
+interface iNav {
+  name: "home";
+}
