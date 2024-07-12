@@ -1,11 +1,15 @@
 import { iSider } from "@/public/interfaces";
 import { Heebo } from "next/font/google";
-import React, { Dispatch, FC, SetStateAction } from "react";
+import React, { Dispatch, FC, SetStateAction, useEffect } from "react";
 import { BsTwitterX, BsInstagram } from "react-icons/bs";
 import { FaFacebook, FaX } from "react-icons/fa6";
 const heebo = Heebo({ subsets: ["latin"] });
 
 const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
+  useEffect(() => {}, []);
+
+  console.log(siderState);
+
   return (
     <aside
       className={`w-[400px] bg-[#f6f6f6] z-[99999] top-0 p-[60px] fixed h-screen right-0 border-l duration-700 ${
