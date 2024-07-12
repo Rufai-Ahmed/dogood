@@ -14,7 +14,7 @@ const DesktopSider: FC<iSider> = ({ setSiderState, siderState, toggle }) => {
   return (
     <aside
       className={`w-[400px] bg-[#f6f6f6] z-[99999] top-0 p-[60px] fixed h-screen right-0 border-l duration-700 ${
-        siderState ? "right-0" : "-right-[2000px]"
+        siderState ? "md:right-0 -right-[2000px]" : "-right-[2000px]"
       }`}
     >
       <FaX

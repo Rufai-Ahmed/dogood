@@ -8,7 +8,10 @@ const heebo = Heebo({ subsets: ["latin"] });
 
 const Contact = () => {
   return (
-    <Container className="min-h-[750px] pb-[100px] items-center gap-7 md:grid-cols-2 grid">
+    <Container
+      id="contact"
+      className="min-h-[750px] pb-[100px] items-center gap-7 md:grid-cols-2 grid"
+    >
       <div className="w-full col-span-2 lg:col-span-1 bg-[#f6f6f6] h-full p-5 md:p-16 flex flex-col">
         <div className="w-full space-y-3">
           <h1 className="text-[45px] md:text-[60px] uppercase">contact us</h1>

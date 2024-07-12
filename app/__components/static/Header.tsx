@@ -7,6 +7,7 @@ import Container from "../re-usables/Container";
 import { BiSearch } from "react-icons/bi";
 import Button from "../re-usables/Button";
 import DesktopSider from "./DesktopSider";
+import MobileDropDown from "./MobileDropDown";
 
 const Header = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -33,17 +34,33 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header onScroll={onScroll}>
+    <header className="w-full" onScroll={onScroll}>
       <LittleHeader />
-      <Container onClick={toggle}>
-        <main className="h-[80px] flex justify-between items-center">
+      <Container
+        onClick={toggle}
+        className={`w-full ${siderState ? "pt-[80px] md:pt-0" : ""}`}
+      >
+        <main
+          className={` flex md:justify-between duration-500 ${
+            siderState
+              ? "h-[70vh] md:h-[80px] pt-[30px] fixed md:static top-0 w-full bg-white z-[9999] left-0 items-start md:items-center flex-col md:flex-row md:pt-0 px-[20px] md:px-0"
+              : "h-[80px] relative items-center justify-between"
+          }`}
+        >
           <Image
             src={"/assets/logo.png"}
             alt="logo"
             width={100}
             height={100}
-            className="hidden lg:block w-[100px]"
+            className="hidden object-contain lg:block w-[100px]"
           />
           <Image
             src={"/assets/smallLogo.png"}
@@ -56,6 +73,7 @@ const Header = () => {
           <div className="lg:flex hidden items-center gap-10">
             {navData.map((el: string, i: number) => (
               <nav
+                onClick={() => handleNavClick(el)}
                 className={`text-[15px] uppercase relative cursor-pointer`}
                 key={i}
                 onMouseEnter={() => handleMouseEnter(i)}
@@ -82,7 +100,9 @@ const Header = () => {
               donate now
             </Button>
             <div
-              className="grid grid-cols-3 grid-rows-3 group  items-center gap-1 cursor-pointer duration-300"
+              className={`grid grid-cols-3 grid-rows-3 group items-center gap-1 cursor-pointer duration-300 ${
+                siderState ? "absolute md:static top-[33px] right-[23px]" : ""
+              }`}
               onClick={toggle}
             >
               {Array(9)
@@ -97,6 +117,13 @@ const Header = () => {
                 ))}
             </div>
           </div>
+
+          <MobileDropDown
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            hoverIndex={hoverIndex!}
+            siderState={siderState!}
+          />
         </main>
       </Container>
 

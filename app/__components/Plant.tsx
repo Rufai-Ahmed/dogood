@@ -8,7 +8,10 @@ const heebo = Heebo({ subsets: ["latin"] });
 
 const Plant = () => {
   return (
-    <Container className="min-h-[750px] pb-[100px] items-center gap-7 md:grid-cols-2 grid">
+    <Container
+      id="subscribe"
+      className="min-h-[750px] pb-[100px] items-center gap-7 md:grid-cols-2 grid"
+    >
       <Image
         src={"/assets/plant.jpg"}
         alt="plant"

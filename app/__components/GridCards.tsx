@@ -9,6 +9,7 @@ const heebo = Heebo({ subsets: ["latin"] });
 const GridCards = () => {
   return (
     <Container
+      id="blogs"
       className={`${heebo.className} text-[21px] pb-[70px] lg:pb-0 lg:p-12 xl:p-20 2xl:p-28 min-h-[500px] grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7`}
     >
       {gridData.map((el: iGrid, i: number) => (

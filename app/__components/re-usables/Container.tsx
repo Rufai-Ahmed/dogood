@@ -7,10 +7,12 @@ const Container: FC<iContainer> = ({
   className,
   onClick,
   style,
+  id,
   ...props
 }) => {
   return (
     <main
+      id={id}
       {...props}
       className={twMerge(
         "container px-4 max-w-[95%] text-wrap mx-auto  2xl:max-w-[1500px]",

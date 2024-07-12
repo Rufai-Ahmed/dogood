@@ -7,7 +7,7 @@ const heebo = Heebo({ subsets: ["latin"] });
 
 const NewsLetter = () => {
   return (
-    <Container className="flex justify-center min-h-[500px]">
+    <Container id="newsletter" className="flex justify-center min-h-[500px]">
       <div className="w-full h-[410px] bg-[#f6f6f6] flex justify-center">
         <div className="h-full w-[80%] flex-col flex justify-center">
           <div className="space-y-4">
