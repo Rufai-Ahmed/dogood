@@ -44,7 +44,7 @@ const Hero = () => {
 
   return (
     <Container
-      className="h-[calc(100vh-20px)] bg-no-repeat px-0 bg-cover bg-center flex items-center max-w-[325px] bg-black overflow-hidden justify-center"
+      className="h-[80vh] md:h-[calc(100vh-20px)] bg-no-repeat px-0 bg-cover bg-center flex items-center max-w-[325px] bg-black overflow-hidden justify-center"
       style={{
         backgroundImage: `url(${currentHero.img})`,
       }}
